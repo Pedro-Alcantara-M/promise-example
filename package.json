@@ -1,0 +1,39 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc --watch & nodemon ./dist/index.js",
+        "debug": "DEBUG=core node ./build/index.js",
+        "lint": "eslint 'src/**/*.ts' --fix",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run lint && npm run format && git add ."
+      }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/debug": "^4.1.12",
+        "@types/node": "^20.11.29",
+        "@typescript-eslint/eslint-plugin": "^7.3.1",
+        "debug": "^4.3.4",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-promise": "^6.1.1",
+        "nodemon": "^3.1.0",
+        "prettier": "^3.2.5",
+        "prettier-eslint-cli": "^8.0.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.2"
+    },
+    "dependencies": {
+        "http": "^0.0.1-security",
+        "husky": "^9.0.11"
+    }
+}
