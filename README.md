@@ -10,7 +10,7 @@ To run the project:
 
 1- Clone the repository:
 ```http
- git clone https://github.com/your-username/Promise-Example.git
+ git clone https://github.com/Pedro-Alcantara-M/promise-example
 ```
 
 2-  Navigate to the project directory:
