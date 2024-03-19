@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const debug = require('debug');
 const logger = debug('core');
 const delays = [...Array(50)].map(() => Math.floor(Math.random() * 900) + 100);
-const load = delays.map(delay => () => new Promise(resolve => {
+const load = delays.map((delay) => () => new Promise((resolve) => {
     setTimeout(() => resolve(Math.floor(delay / 100)), delay);
 }));
 const throttle = (workers, tasks) => __awaiter(void 0, void 0, void 0, function* () {
@@ -44,6 +44,6 @@ const bootstrap = () => __awaiter(void 0, void 0, void 0, function* () {
     logger('Done in %dms', Date.now() - start);
     logger('Answers: %O', answers);
 });
-bootstrap().catch(err => {
+bootstrap().catch((err) => {
     logger('General fail: %O', err);
 });
