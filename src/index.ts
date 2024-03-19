@@ -17,7 +17,7 @@ const throttle = async (
     workers: number,
     tasks: TaskType[],
 ): Promise<number[]> => {
-    const results: number[] = [] 
+    const results: number[] = []
 
     const executeTask = async (task: TaskType): Promise<void> => {
         const result = await task()
